@@ -82,10 +82,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  googleFonts: {
-    download: true,
-    families: {
-      Ubuntu: true,
-    },
+  router: {
+    base: '/portfolio/',
   },
 }
