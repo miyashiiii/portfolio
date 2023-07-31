@@ -3,7 +3,7 @@
     <!-- Profile section -->
     <v-row class="align-center justify-center">
       <v-col cols="4">
-        <v-img :src="profileImage" height="350" weight="350"></v-img>
+        <v-img :src="profileImage" contain height="350" weight="350"></v-img>
       </v-col>
       <v-col cols="4">
         <p class="font-weight-bold mb-3 prof-text">miyashiiii</p>
