@@ -37,45 +37,27 @@ export default {
         {
           title: 'ポートフォリオ',
           subtitle: 'このサイト',
-          thumbnail: '/works/miyashiiii.png',
+          thumbnail: require('@/static/works/miyashiiii.png'),
           url: '/',
           tags: ['Nuxt.js', 'Vuetify', 'GitHub Pages'],
         },
         {
           title: '数読',
           subtitle: 'Androidアプリ',
-          thumbnail: '/works/sudoku.png',
+          thumbnail: require('@/static/works/sudoku.png'),
           url: 'https://play.google.com/store/apps/details?id=com.miyashiiii.sudoku',
           tags: ['Android', 'Flutter', 'Dart'],
         },
         {
           title: 'TapNum',
           subtitle: 'Androidアプリ',
-          thumbnail: '/works/tapnum.png',
+          thumbnail: require('@/static/works/tapnum.png'),
           url: 'https://play.google.com/store/apps/details?id=com.miyashiiii.tapnum',
           tags: ['Android', 'Unity', 'C#'],
         },
       ],
       certifications: ['AWS DVA', '基本情報', '応用情報', '囲碁四段'],
     }
-  },
-  methods: {
-    getDomain(url) {
-      // URLからドメイン名を抽出
-      return new URL(url).hostname
-    },
-    getIconPath(url) {
-      // ドメイン名に基づいてアイコンのパスを返す
-      const domain = this.getDomain(url)
-      if (domain.includes('hatenablog')) {
-        return '/sns/hatenablog.png'
-      } else if (domain.includes('qiita')) {
-        return '/sns/qiita.png'
-      } else {
-        // ドメインが一致しない場合のデフォルトのアイコン
-        return '/sns/hatenablog.png'
-      }
-    },
   },
 }
 </script>

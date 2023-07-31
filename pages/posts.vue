@@ -47,20 +47,19 @@ export default {
       // ドメイン名に基づいてアイコンのパスを返す
       const domain = this.getDomain(url)
       if (domain.includes('hatenablog')) {
-        return '/sns/hatenablog.png'
+        return require('@/static/sns/hatenablog.png')
       } else if (domain.includes('qiita')) {
-        return '/sns/qiita.png'
+        return require('@/static/sns/qiita.png')
       } else if (domain.includes('note')) {
-        return '/sns/note.png'
+        return require('@/static/sns/note.png')
       } else if (domain.includes('zenn')) {
-        return '/sns/zenn.png'
+        return require('@/static/sns/zenn.png')
       } else {
         // ドメインが一致しない場合のデフォルトのアイコン
-        return '/sns/hatenablog.png'
+        return require('@/static/sns/hatenablog.png')
       }
     },
     getSiteName(url) {
-      // ドメイン名に基づいてアイコンのパスを返す
       const domain = this.getDomain(url)
       if (domain.includes('hatenablog')) {
         return 'はてなブログ'
@@ -71,8 +70,7 @@ export default {
       } else if (domain.includes('zenn')) {
         return 'Zenn'
       } else {
-        // ドメインが一致しない場合のデフォルトのアイコン
-        return '/sns/hatenablog.png'
+        return ''
       }
     },
   },

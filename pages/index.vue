@@ -3,7 +3,7 @@
     <!-- Profile section -->
     <v-row class="align-center justify-center">
       <v-col cols="4">
-        <v-img src="/miyashiiii.png" height="350" weight="350"></v-img>
+        <v-img :src="profileImage" height="350" weight="350"></v-img>
       </v-col>
       <v-col cols="4">
         <p class="font-weight-bold mb-3 prof-text">miyashiiii</p>
@@ -49,39 +49,31 @@
 export default {
   data() {
     return {
+      profileImage: require('@/static/miyashiiii.png'),
       aboutMe: [
         '1993年生まれ。埼玉県在住。',
         '都内の受託開発企業でサーバーサイドエンジニアをしています。',
         'Pythonが好きです。',
       ],
       links: [
-        { url: 'https://twitter.com/mysh_iiii', icon: '/sns/twitter.png' },
+        {
+          url: 'https://twitter.com/mysh_iiii',
+          icon: require('@/static/sns/twitter.png'),
+        },
         {
           url: 'https://miyashiiii.hatenablog.jp/',
-          icon: '/sns/hatenablog.png',
+          icon: require('@/static/sns/hatenablog.png'),
         },
-        { url: 'https://qiita.com/miyashiiii', icon: '/sns/qiita.png' },
-        { url: 'https://github.com/miyashiiii', icon: '/sns/github.png' },
+        {
+          url: 'https://qiita.com/miyashiiii',
+          icon: require('@/static/sns/qiita.png'),
+        },
+        {
+          url: 'https://github.com/miyashiiii',
+          icon: require('@/static/sns/github.png'),
+        },
       ],
     }
-  },
-  methods: {
-    getDomain(url) {
-      // URLからドメイン名を抽出
-      return new URL(url).hostname
-    },
-    getIconPath(url) {
-      // ドメイン名に基づいてアイコンのパスを返す
-      const domain = this.getDomain(url)
-      if (domain.includes('hatenablog')) {
-        return '/sns/hatenablog.png'
-      } else if (domain.includes('qiita')) {
-        return '/sns/qiita.png'
-      } else {
-        // ドメインが一致しない場合のデフォルトのアイコン
-        return '/sns/hatenablog.png'
-      }
-    },
   },
 }
 </script>
