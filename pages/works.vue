@@ -7,7 +7,13 @@
       </v-col>
     </v-row>
     <v-row class="mb-5 justify-center" max-width="75%">
-      <v-col v-for="(work, index) in works" :key="index" cols="4" xl="3">
+      <v-col
+        v-for="(work, index) in works"
+        :key="index"
+        cols="12"
+        md="4"
+        xl="3"
+      >
         <v-card class="mb-3" :href="work.url">
           <v-img :src="work.thumbnail" height="180" contain></v-img>
           <v-card-title>{{ work.title }}</v-card-title>

@@ -2,10 +2,10 @@
   <div>
     <!-- Profile section -->
     <v-row class="align-center justify-center">
-      <v-col cols="4">
+      <v-col cols="6" sm="4">
         <v-img :src="profileImage" contain height="350" weight="350"></v-img>
       </v-col>
-      <v-col cols="4">
+      <v-col cols="6">
         <p class="font-weight-bold mb-3 prof-text">miyashiiii</p>
         <p class="mb-3 prof-text">Software Engineer</p>
         <p class="prof-text">Saitama, Japan</p>
@@ -21,7 +21,7 @@
         <v-divider class="mb-5"></v-divider>
       </v-col>
     </v-row>
-    <v-col class="mx-auto" cols="6" xl="3">
+    <v-col class="mx-auto" cols="12" md="6" xl="3">
       <p>
         <span v-for="(line, index) in aboutMe" :key="index">
           {{ line }}<br />
@@ -38,7 +38,7 @@
         :href="link.url"
       >
         <a>
-          <v-img :src="link.icon" height="32" width="32"></v-img>
+          <v-img :src="link.icon" contain height="32" width="32"></v-img>
         </a>
       </div>
     </v-row>

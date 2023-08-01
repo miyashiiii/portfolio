@@ -7,16 +7,18 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="8" xl="4" class="mx-auto">
+      <v-col cols="12" md="8" xl="4" class="mx-auto">
         <v-list lines="one">
           <v-divider></v-divider>
           <div v-for="item in blogPosts" :key="item.title">
-            <v-list-item :href="item.url" class="pl-5 py-0">
+            <v-list-item :href="item.url" class="px-0 pl-md-5 py-0">
               <v-avatar size="36" class="mx-5">
-                <img :src="getIconPath(item.url)" alt="Avatar" />
+                <img :src="getIconPath(item.url)" contain alt="icon" />
               </v-avatar>
               <v-list-item-content>
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                <v-list-item-title class="wrap-text">{{
+                  item.title
+                }}</v-list-item-title>
                 <v-list-item-subtitle>
                   {{ item.date }} {{ getSiteName(item.url) }}
                 </v-list-item-subtitle>
