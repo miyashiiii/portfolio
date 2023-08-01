@@ -1,22 +1,22 @@
 <template>
   <v-app>
-    <HeaderComponent />
-    <v-container max-width="75%">
-      <v-main>
+    <AppHeader />
+    <v-main>
+      <v-container max-width="75%">
         <Nuxt />
-      </v-main>
-    </v-container>
-    <FooterComponent />
+      </v-container>
+    </v-main>
+    <AppFooter />
   </v-app>
 </template>
 <script>
-import FooterComponent from '~/components/footerComponent.vue'
-import HeaderComponent from '~/components/headerComponent.vue'
+import AppFooter from '@/components/AppFooter.vue'
+import AppHeader from '@/components/AppHeader.vue'
 
 export default {
   components: {
-    HeaderComponent,
-    FooterComponent,
+    AppHeader,
+    AppFooter,
   },
 }
 </script>
