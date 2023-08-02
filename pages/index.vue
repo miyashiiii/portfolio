@@ -5,7 +5,7 @@
       <v-col cols="6" sm="4">
         <v-img :src="profileImage" contain height="350" weight="350"></v-img>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="6" sm="4">
         <p class="font-weight-bold mb-3 prof-text">miyashiiii</p>
         <p class="mb-3 prof-text">Software Engineer</p>
         <p class="prof-text">Saitama, Japan</p>
