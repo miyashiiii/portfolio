@@ -31,13 +31,8 @@
 
     <!-- Links section -->
     <v-row class="mt-5 justify-center">
-      <div
-        v-for="(link, index) in links"
-        :key="index"
-        class="mx-3"
-        :href="link.url"
-      >
-        <a>
+      <div v-for="(link, index) in links" :key="index" class="mx-3">
+        <a :href="link.url">
           <v-img :src="link.icon" contain height="32" width="32"></v-img>
         </a>
       </div>
