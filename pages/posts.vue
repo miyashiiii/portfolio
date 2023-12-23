@@ -56,9 +56,10 @@ export default {
         return require('@/static/sns/note.png')
       } else if (domain.includes('zenn')) {
         return require('@/static/sns/zenn.png')
+      } else if (domain.includes('docswell')) {
+        return require('@/static/sns/docswell.png')
       } else {
-        // ドメインが一致しない場合のデフォルトのアイコン
-        return require('@/static/sns/hatenablog.png')
+        return require('@/static/miyashiiii.png')
       }
     },
     getSiteName(url) {
